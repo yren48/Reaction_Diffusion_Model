@@ -45,7 +45,7 @@ l = 6.07E-5*2; % Changed thickness
 sc = sc * 10.5 / 8.7; % adjust for the different pressure
 % call pde solver
 disp("running the model for 10.5 Torr, 130 C, 607 nm...")
-mass = TMA_PMMA(t, l, df, sc, pc, hd, k).*0.96;
+mass = TMA_PMMA(t, l, df, sc, pc, hd, k).*0.9621; %Applied the correction factor for small change in surface area
 % visualization
 h = figure;
 drawnow;
