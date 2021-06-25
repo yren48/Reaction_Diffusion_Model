@@ -37,15 +37,16 @@ plot(t.^0.5, mass, '.-b', 'MarkerSize', 10);
 title("8.7 Torr, 130 C, 483 nm");
 hold off
 
+disp("please close figure for moving to the next example...");
 waitfor(h);
 
 % 10.5 Torr, 130 C, 607 nm 
 % define variables
-l = 5.84E-5*2; % see paper for the reason of adjustment
+l = 6.07E-5*2; % see paper for the reason of adjustment
 sc = sc * 10.5 / 8.7; % adjust for the different pressure
 % call pde solver
 disp("running the model for 10.5 Torr, 130 C, 607 nm...")
-mass = TMA_PMMA(t, l, df, sc, pc, hd, k);
+mass = TMA_PMMA(t, l, df, sc, pc, hd, k).*0.9621;
 % visualization
 h = figure;
 drawnow;
