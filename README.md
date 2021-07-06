@@ -1,6 +1,6 @@
 # Reaction-Diffusion Model 
 
-This repository provides the MATLAB implementation of the reaction-diffusion model for the vapor phase infiltration (VPI) process from Ren et al. (2021). 
+This repository provides the MATLAB implementation of the reaction-diffusion model for the vapor phase infiltration (VPI) process in our paper "[Reaction−Diffusion Transport Model to Predict Precursor Uptake and Spatial Distribution in Vapor-Phase Infiltration Processes][1]". 
 
 `TMA_PMMA.m` contains the source code for the numerically solving the partial differential equations. `experiment.m` contains the code for inputting the required variables and then call the numerical solver in `TMA_PMMA.m`. Here is an example from `experiment.m` for using the code.
 
@@ -20,3 +20,4 @@ k = 1; % reaction rate (cm^3/mol s)
 % call numerical solver
 mass = TMA_PMMA(t, l, df, sc, pc, hd, k);
 ```
+[1]:https://pubs.acs.org/doi/10.1021/acs.chemmater.1c01283
